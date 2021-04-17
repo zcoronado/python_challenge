@@ -3,6 +3,7 @@ import os
 import csv
 import numpy as np 
 
+
 # You will be give a set of poll data called election_data.csv. The dataset is composed of three columns: Voter ID, County, and Candidate. Your task is to create a Python script that analyzes the votes and calculates each of the following:
 filepath = os.path.join("election_data.csv")
 with open(filepath, 'r') as open_file: 
@@ -14,12 +15,14 @@ with open(filepath, 'r') as open_file:
     voter_county = []
     voter_candidate = []
     unique_candidates = []
+    
+
 
     for row in csv_reader: 
         voter_id.append(row[0])
         voter_county.append(row[1])
         voter_candidate.append(row[2])
-
+        
 
 # The total number of votes cast
     total_votes = len(voter_id)
@@ -30,12 +33,15 @@ with open(filepath, 'r') as open_file:
     print(unique_candidates)
 
 # The percentage of votes each candidate won 
-
+    # khan_votes = "Khan"
+    # khan_votes = total_votes.count("Khan")
+    # khan_percent = khan_total_votes/len(total_votes)
+    # print(khan_percent)
     
 
 
 # The total number of votes each candidate won
-     count_dictionary = {}
+    count_dictionary = {}
     for name in voter_candidate:
         if name in count_dictionary:
             count_dictionary[name] +=1 
