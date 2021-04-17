@@ -67,4 +67,19 @@ with open(filepath, 'r') as open_file:
 
 #  In addition, your final script should both print the analysis to the terminal 
 #  and export a text file with the results.
+   
+myText = open(r'C:\Users\coron\OneDrive\Desktop\python_challenge\PyBank\analysis','w')
+myString = 
+'T  
+print(f'''
+Financial Analysis
+===============================
+Total Months : {round(unique_date, 2)}
+Total :  {round(total_net, 2)}
+Average  Change: ${round(average_profits, 2 )}
+Greatest Increase in Profits: {max_increase_date }, (${greatest_increase})
+Greatest Decrease in Profits: {min_increase_date }, (${greatest_decrease})
+     ''')'
+myText.write(myString)
+myText.close()
     
